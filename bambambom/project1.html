@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabel Data Diri</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const detail = button.nextElementSibling;
+                    if (detail.style.display === "block") {
+                        detail.style.display = "none";
+                    } else {
+                       
+                        detail.style.display = "block";
+                        detail.style.opacity = 0;
+                        setTimeout(() => {
+                            detail.style.opacity = 1;
+                            detail.style.transition = "opacity 0.5s ease-in-out";
+                        }, 10);
+                    }
+                });
+            });
+
+          
+            document.addEventListener('click', (event) => {
+                const isClickInsideTable = event.target.closest('.container');
+                if (!isClickInsideTable) {
+                    document.querySelectorAll('.detail').forEach(detail => {
+                        detail.style.display = "none";
+                    });
+                }
+            });
+        });
+    </script>
+    </head>
+<body>
+    <h1>AsmaDeus</h1>
+
+    <div class="table-container">
+        <div class="container">
+            <table>
+                <tr>
+                    <th colspan="5">Data Diri Bama</th>
+                </tr>
+                <tr>
+                    <td rowspan="7">
+                        <img src="Bama.jpg" width="300" height="300" />
+                        <button onclick="toggleDetail('detail-bama')">Lihat Detail</button>
+                        <div id="detail-bama" class="detail">
+                            <div class="detail-content">
+                                <p><strong>Nama:</strong> Putu Bramara Asya Miartha</p>
+                                <p><strong>Tempat, Tanggal Lahir:</strong> Denpasar, 04 - 08 - 2008</p>
+                                <p><strong>Alamat:</strong> Jl. Gunung Gede no 9x, Padangsambian</p>
+                                <p><strong>Umur:</strong> 16</p>
+                                <p><strong>Hobby:</strong> Membuat Desain/Animasi</p>
+                                <p><strong>No. Telp:</strong> 087750939493</p>
+                            </div>
+                            <div class="detail-content">
+                                <p><strong>Sosmed:</strong></p>
+                                <ul>
+                                    <li><a href="https://www.youtube.com/@BramAnimation">Youtube: BramAnimation</a></li>
+                                    <li><a href="https://www.instagram.com/bamz_843?igsh=YzB2OXZsMDUzdXYz">Instagram: Bamz_843</a></li>
+                                    <li><a href="https://www.facebook.com/bama.miartha.1/">Facebook: Bama Miartha</a></li>
+                                    <li><a href="https://www.tiktok.com/@bamamiartha?_t=8oqsBd4ly1x&_r=1">TikTok: Asikin aja</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th colspan="5">Data Diri Rangga</th>
+                </tr>
+                <tr>
+                    <td rowspan="7">
+                        <img src="rangga.jpeg" width="300" height="300" />
+                        <button onclick="toggleDetail('detail-rangga')">Lihat Detail</button>
+                        <div id="detail-rangga" class="detail">
+                            <div class="detail-content">
+                                <p><strong>Nama:</strong> Gede Rangga Adi Suputra</p>
+                                <p><strong>Tempat, Tanggal Lahir:</strong> Buleleng, 28 - 03 - 2008</p>
+                                <p><strong>Alamat:</strong> Jl. Gulingan, Mengwi</p>
+                                <p><strong>Umur:</strong> 16</p>
+                                <p><strong>Hobby:</strong> Tidur</p>
+                                <p><strong>No. Telp:</strong> 081775031668</p>
+                            </div>
+                            <div class="detail-content">
+                                <p><strong>Sosmed:</strong></p>
+                                <ul>
+                                    <li><a href="https://www.instagram.com/ranrr_rr?igsh=Z2JvaG5lcmhod2d4">Instagram: Ranrr</a></li>
+                                    <li><a href="https://www.tiktok.com/@kisatmoo?_t=8oqu86wzJqs&_r=1">TikTok: Ranrr</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th colspan="5">Data Diri Ardi</th>
+                </tr>
+                <tr>
+                    <td rowspan="7">
+                        <img src="ardi.jpeg" width="300" />
+                        <button onclick="toggleDetail('detail-ardi')">Lihat Detail</button>
+                        <div id="detail-ardi" class="detail">
+                            <div class="detail-content">
+                                <p><strong>Nama:</strong> Fahri Ardiansyah Firdaus</p>
+                                <p><strong>Tempat, Tanggal Lahir:</strong> Denpasar, 06 - 04 - 2008</p>
+                                <p><strong>Alamat:</strong> Jl. Padma, Gg. indrablaka</p>
+                                <p><strong>Umur:</strong> 16</p>
+                                <p><strong>Hobby:</strong> Menggambar</p>
+                                <p><strong>No. Telp:</strong> 081238478677</p>
+                            </div>
+                            <div class="detail-content">
+                                <p><strong>Sosmed:</strong></p>
+                                <ul>
+                                    <li><a href="https://www.instagram.com/ardieeeetzy?igsh=MTY1M3dmNm94aDVueA==">Instagram: Ardi</a></li>
+                                    <li><a href="https://www.tiktok.com/@dyyy.8?_t=8oqu0WTxLmc&_r=1">TikTok: Ardi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
